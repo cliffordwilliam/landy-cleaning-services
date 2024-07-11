@@ -1,11 +1,5 @@
 const baseUrl = window.location.origin;
 
-// Utility function to navigate to a new route
-function navigateTo(url) {
-    history.pushState(null, null, url);
-    router();
-}
-
 // Example data for services
 const services = {
     1: { 
@@ -54,6 +48,12 @@ const generalFaqs = [
     { title: "Faq 3", content: "content 3" }
 ];
 
+// Utility function to navigate to a new route
+function navigateTo(url) {
+    history.pushState(null, null, url);
+    router();
+}
+
 // Function to generate testimonials HTML
 function generateTestimonialsHTML() {
     return `<div>${testimonials.map(testimonial => `<h3>${testimonial.name}</h3><p>${testimonial.city}</p>`).join('')}</div>`;
@@ -78,10 +78,30 @@ function generateFaqsHTML(faqs) {
 
 // Routes configuration
 const routes = {
-    '/': `<h1>Home Page</h1>${generateServiceLinksHTML(2)}<a href="${baseUrl}/service" data-link>Service</a>${generateTestimonialsHTML()}`,
-    '/about': '<h1>About Page</h1>',
-    '/faq': `<h1>Faq Page</h1>${generateFaqsHTML(generalFaqs)}`,
-    '/service': `<a href="${baseUrl}/" data-link>Home</a> > <span>Service</span><h1>Service Page</h1>${generateServiceLinksHTML()}`
+    '/': {
+        name: "Home",
+        page: `
+        <h1>Home Page</h1>${generateServiceLinksHTML(2)}<a href="${baseUrl}/service" data-link>Service</a>${generateTestimonialsHTML()}
+        `,
+    },
+    '/about': {
+        name: "About",
+        page: `
+        <h1>About Page</h1>
+        `,
+    },
+    '/faq': {
+        name: "FAQ",
+        page: `
+        <h1>Faq Page</h1>${generateFaqsHTML(generalFaqs)}
+        `,
+    },
+    '/service': {
+        name: "Service",
+        page: `
+        <a href="${baseUrl}/" data-link>Home</a> > <span>Service</span><h1>Service Page</h1>${generateServiceLinksHTML()}
+        `,
+    },
 }
 
 // Router function
@@ -109,6 +129,7 @@ function router() {
                 <h1>${service.title}</h1>
                 <p>${service.content}</p>
                 ${generateListHTML(service.list)}
+                ${generateServiceLinksHTML()}
                 <h2>FAQs</h2>
                 ${generateFaqsHTML(service.faqs)}
                 <div>
@@ -122,7 +143,7 @@ function router() {
         }
     } else {
         // Handle normal pages
-        app.innerHTML = routes[path] || '<h1>404 Not Found</h1>';
+        app.innerHTML = routes[path].page || '<h1>404 Not Found</h1>';
     }
 }
 
@@ -135,9 +156,93 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.matches('[data-link]')) {
             e.preventDefault();
             navigateTo(e.target.getAttribute('href'));
+
+            // Update nav links active class
+            updateActiveLink();
         }
     });
 
+    // Populate the navbar
+    // Toggler prop
+    const togglerProp = `data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"`
+    function populateNavbarDropDownMenuLi() {
+        return Object.keys(services).map(id => {
+            return `
+            <li>
+                <a class="dropdown-item" href="${baseUrl}/service/${id}" data-link ${togglerProp}>${services[id].title}</a>
+            </li>`;
+        }).join('');
+    }
+
+    function populateNavbarUlWithLi() {
+        const pathName = window.location.pathname;
+
+        return Object.keys(routes).map(hrefLink => {
+            // For this design the service is in the drop down
+            if (hrefLink !== "/service") {
+                const isActive = 
+                (pathName === "/" && hrefLink === "/") ||
+                pathName === hrefLink ||
+                pathName?.startsWith(`${hrefLink}/`);
+                const activeClass = isActive ? 'nav-link active' : 'nav-link';
+                const ariaCurrent = isActive ? 'aria-current="page"' : '';
+        
+                return `
+                    <li class="nav-item">
+                        <a class="${activeClass} nav-link-ref" ${ariaCurrent} href="${baseUrl}${hrefLink}" data-link ${togglerProp}>${routes[hrefLink].name}</a>
+                    </li>
+                `;
+            }
+        }).join('');
+    }
+    
+    function updateActiveLink() {
+        const pathName = window.location.pathname;
+        const navLinks = document.getElementsByClassName('nav-link-ref');
+    
+        Array.from(navLinks).forEach(link => {
+            const href = link.getAttribute('href').replace(baseUrl, '');
+            const isActive = 
+            (pathName === "/" && href === "/") ||
+            pathName === href ||
+            pathName?.startsWith(`${href}/`);
+    
+            if (isActive) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    // Create the nav
+    const nav = document.getElementById('nav');
+    nav.innerHTML = `
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" data-link>Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                ${populateNavbarUlWithLi()}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="${baseUrl}/service" data-link ${togglerProp}>All Service</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        ${populateNavbarDropDownMenuLi()}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    `;
+    
     // Initialize the router on first page load
     router();
 });
