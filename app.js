@@ -1,3 +1,5 @@
+const baseUrl = window.location.origin;
+
 // Utility function to navigate to a new route
 function navigateTo(url) {
     history.pushState(null, null, url);
@@ -46,7 +48,6 @@ const testimonials = [
 ];
 
 // Example data for general FAQs
-// TODO: Add search func to filter this
 const generalFaqs = [
     { title: "Faq 1", content: "content 1" },
     { title: "Faq 2", content: "content 2" },
@@ -61,7 +62,7 @@ function generateTestimonialsHTML() {
 // Function to generate service links HTML
 function generateServiceLinksHTML(limit = Object.keys(services).length) {
     return Object.keys(services).slice(0, limit).map(id => {
-        return `<p><a href="/service/${id}" data-link>${services[id].title}</a></p>`;
+        return `<p><a href="${baseUrl}/service/${id}" data-link>${services[id].title}</a></p>`;
     }).join('');
 }
 
@@ -77,16 +78,15 @@ function generateFaqsHTML(faqs) {
 
 // Routes configuration
 const routes = {
-    '/': `<h1>Home Page</h1>${generateServiceLinksHTML(2)}<a href="/service" data-link>Service</a>${generateTestimonialsHTML()}`,
+    '/': `<h1>Home Page</h1>${generateServiceLinksHTML(2)}<a href="${baseUrl}/service" data-link>Service</a>${generateTestimonialsHTML()}`,
     '/about': '<h1>About Page</h1>',
     '/faq': `<h1>Faq Page</h1>${generateFaqsHTML(generalFaqs)}`,
-    '/service': `<a href="/" data-link>Home</a> > <span>Service</span><h1>Service Page</h1>${generateServiceLinksHTML()}`
+    '/service': `<a href="${baseUrl}/" data-link>Home</a> > <span>Service</span><h1>Service Page</h1>${generateServiceLinksHTML()}`
 }
 
 // Router function
 function router() {
     let path = window.location.pathname;
-    if (path === '/') path = '/';
 
     const app = document.getElementById('app');
 
@@ -100,12 +100,12 @@ function router() {
             const nextId = services[postId + 1] ? postId + 1 : null;
 
             // Generate navigation buttons
-            const prevButton = prevId ? `<a href="/service/${prevId}" data-link>Previous</a>` : '';
-            const nextButton = nextId ? `<a href="/service/${nextId}" data-link>Next</a>` : '';
+            const prevButton = prevId ? `<a href="${baseUrl}/service/${prevId}" data-link>Previous</a>` : '';
+            const nextButton = nextId ? `<a href="${baseUrl}/service/${nextId}" data-link>Next</a>` : '';
 
             // Detail page
             app.innerHTML = `
-                <a href="/" data-link>Home</a> > <a href="/service" data-link>Service</a> > <span>${service.title}</span>
+                <a href="${baseUrl}/" data-link>Home</a> > <a href="${baseUrl}/service" data-link>Service</a> > <span>${service.title}</span>
                 <h1>${service.title}</h1>
                 <p>${service.content}</p>
                 ${generateListHTML(service.list)}
@@ -115,7 +115,7 @@ function router() {
                     ${prevButton}
                     ${nextButton}
                 </div>
-                <a href="/service" data-link>Back to Service</a>
+                <a href="${baseUrl}/service" data-link>Back to Service</a>
             `;
         } else {
             app.innerHTML = '<h1>404 Not Found</h1>';
@@ -141,3 +141,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the router on first page load
     router();
 });
+
+navigateTo(`${baseUrl}/`);
