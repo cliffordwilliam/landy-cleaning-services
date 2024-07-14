@@ -1,0 +1,38 @@
+#app {
+    overflow-x: hidden;
+}
+.hero-container {
+    position: relative;
+    padding: 107px 1rem;
+}
+.blue-bg {
+    background: #232B70 no-repeat url("./hero_bg.svg");
+}
+.hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+.hero-img-left {
+    flex-shrink: 1;
+    flex-basis: 1039px;
+}
+.hero-img {
+    display: block;
+}
+.bubble {
+    position: absolute;
+    width: 1920px;
+    height: 270px;
+    left: calc(50% - 1920px/2);
+    bottom: 0px;
+}
+.other-button-card {
+    display: block;
+    width: 184px;
+    height: 160px;
+    background: #1A8F6A;
+    border-radius: 16px 16px 80px 16px;
+    padding: 1rem;
+    color: white !important;
+}
