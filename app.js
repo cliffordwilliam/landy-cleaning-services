@@ -5,8 +5,8 @@ const services = {
     1: { 
         title: "Bathroom", 
         content: "Comprehensive Bathroom Cleaning for Ultimate Freshness.",
-        src: "./public/bathroom.jpeg",
-        icon: "./public/bathroom_icon.svg",
+        src: "public/bathroom.jpeg",
+        icon: "public/bathroom_icon.svg",
         list: ["Feature 1", "Feature 2", "Feature 3"],
         faqs: [
             { title: "Faq 1", content: "content 1" },
@@ -17,8 +17,8 @@ const services = {
     2: { 
         title: "Livingroom", 
         content: "Impeccable Home Cleaning for Every Corner.",
-        src: "./public/livingroom.jpeg",
-        icon: "./public/livingroom_icon.svg",
+        src: "public/livingroom.jpeg",
+        icon: "public/livingroom_icon.svg",
         list: ["Feature A", "Feature B", "Feature C"],
         faqs: [
             { title: "Faq a", content: "content a" },
@@ -29,8 +29,8 @@ const services = {
     3: {
         title: "Bedroom",
         content: "Create a Serene and Tidy Bedroom Retreat.",
-        src: "./public/bedroom.jpeg",
-        icon: "./public/bedroom_icon.svg",
+        src: "public/bedroom.jpeg",
+        icon: "public/bedroom_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -41,8 +41,8 @@ const services = {
     4: {
         title: "Laundry Room",
         content: "Keep Your Laundry Room Spotless and Efficient.",
-        src: "./public/laundryroom.png",
-        icon: "./public/laundryroom_icon.svg",
+        src: "public/laundryroom.png",
+        icon: "public/laundryroom_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -53,8 +53,8 @@ const services = {
     5: {
         title: "Kitchen",
         content: "Revitalize Your Kitchen with Detailed Cleaning Excellence.",
-        src: "./public/kitchen.jpeg",
-        icon: "./public/kitchen_icon.svg",
+        src: "public/kitchen.jpeg",
+        icon: "public/kitchen_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -65,8 +65,8 @@ const services = {
     6: {
         title: "Door",
         content: "Enhance Your Home’s Entrance with Pristine Doors.",
-        src: "./public/door.png",
-        icon: "./public/door_icon.svg",
+        src: "public/door.png",
+        icon: "public/door_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -77,8 +77,8 @@ const services = {
     7: {
         title: "All Room",
         content: "Comprehensive Cleaning for Every Room in Your Home.",
-        src: "./public/allroom.jpeg",
-        icon: "./public/allroom_icon.svg",
+        src: "public/allroom.jpeg",
+        icon: "public/allroom_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -89,8 +89,8 @@ const services = {
     7: {
         title: "Additional",
         content: "Transform Every Room with Detailed Cleaning Services.",
-        src: "./public/other.jpeg",
-        icon: "./public/other_icon.svg",
+        src: "public/other.jpeg",
+        icon: "public/other_icon.svg",
         list: ["Feature X", "Feature Y", "Feature Z"],
         faqs: [
             { title: "Faq x", content: "content x" },
@@ -168,9 +168,9 @@ const routes = {
         <div class="hero-container blue-bg">
             <div class="hero">
                 <div class="hero-img-left"></div>
-                <img class="img-fluid hero-img" src="./public/hero.png" alt="Hero" width="576" height="640">
+                <img class="img-fluid hero-img" src="public/hero.png" alt="Hero" width="576" height="640">
             </div>
-            <img class="bubble" src="./public/bubble.svg" alt="Bubble" width="1920" height="270">
+            <img class="bubble" src="public/bubble.svg" alt="Bubble" width="1920" height="270">
         </div>
         <section class="px-4 pt-5 my-5 mt-0" style="background:#F7FAFC;">
             <div class="container">
@@ -178,21 +178,21 @@ const routes = {
                 <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                     <div class="feature col">
                         <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                            <img class="img-fluid hero-img" src="./public/handshake.svg" alt="Handshake" width="120" height="120">
+                            <img class="img-fluid hero-img" src="public/handshake.svg" alt="Handshake" width="120" height="120">
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Reliability and Trust</h3>
                         <p>Dependable cleaning services you can count on for a pristine home, every time.</p>
                         </div>
                         <div class="feature col">
                         <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                            <img class="img-fluid hero-img" src="./public/broom.svg" alt="Broom" width="120" height="120">
+                            <img class="img-fluid hero-img" src="public/broom.svg" alt="Broom" width="120" height="120">
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Customized Care</h3>
                         <p>Tailored cleaning to meet your specific needs, from routine dusting to decluttering and organizing.</p>
                         </div>
                         <div class="feature col">
                         <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                            <img class="img-fluid hero-img" src="./public/hearthand.svg" alt="HeartHand" width="120" height="120">
+                            <img class="img-fluid hero-img" src="public/hearthand.svg" alt="HeartHand" width="120" height="120">
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Comprehensive Solutions</h3>
                         <p>Full-range services, including vacant house cleaning, to ensure every space is spotless and ready.</p>
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.innerHTML = `
     <div class="container">
         <a class="navbar-brand" href="/" data-link>
-            <img src="./public/logo.svg" alt="Landlady" width="242" height="55">
+            <img src="public/logo.svg" alt="Landlady" width="242" height="55">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
