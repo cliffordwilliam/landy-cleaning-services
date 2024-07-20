@@ -15,14 +15,14 @@
 <body style="overflow-x: hidden;">
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">
+    <div class="container">
+      <a class="navbar-brand" style="margin-right: auto;" href="./index.html">
         <img src="./public/logo.svg" alt="Landy" width="242" height="55">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style=" flex-grow:0;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
@@ -36,8 +36,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./services.html">All</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Bathroom</a></li>
-              <li><a class="dropdown-item" href="#">Livingroom</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(1)">Bathroom</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(1)">Livingroom</a></li>
               <li><a class="dropdown-item" href="#">Bedroom</a></li>
               <li><a class="dropdown-item" href="#">Laundry Room</a></li>
               <li><a class="dropdown-item" href="#">Kitchen</a></li>
@@ -359,6 +359,12 @@
 
     </footer>
   </div>
+
+  <script>
+    function navigateToService(id) {
+        window.location.href = `service.html?id=${id}`;
+    }
+  </script>
 
 </body>
 </html>
