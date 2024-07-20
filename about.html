@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/bootstrap.min.css">
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+  <style>
+    /* * {
+      outline: 1px solid red;
+    } */
+  </style>
+</head>
+<body style="overflow-x: hidden;">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" style="margin-right: auto;" href="./index.html">
+        <img src="./public/logo.svg" alt="Landy" width="242" height="55">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style=" flex-grow:0;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./services.html">All</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(1)">Bathroom</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(2)">Livingroom</a></li>
+              <li><a class="dropdown-item" href="#">Bedroom</a></li>
+              <li><a class="dropdown-item" href="#">Laundry Room</a></li>
+              <li><a class="dropdown-item" href="#">Kitchen</a></li>
+              <li><a class="dropdown-item" href="#">Door</a></li>
+              <li><a class="dropdown-item" href="#">All Room</a></li>
+              <li><a class="dropdown-item" href="#">Additional</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="px-4 py-5 my-0" style="height: 702px; background: url(./public/about_hero.webp); background-size: cover; display: flex; align-items: center;">
+    <div style="display: flex; width: 100%;">
+        <div style="flex-basis: 252px; flex-grow: 0; flex-shrink: 1;"></div>
+        <div style="flex-grow: 1; flex-shrink: 0; width: 100%; max-width: 500px;">
+            <span class="lead mb-4" style="color: #1A8F6A;">Meet Landy Cleaning Services</span>
+            <h1 class="display-5 fw-bold" style="color: #FFFFFF;">Transforming <br>Spaces, One Clean <br>at a Time</h1>
+        </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <p class="lead">At Landy Cleaning Services, we believe a clean home is a happy home. Founded with a passion for perfection and a commitment to excellence, our mission is to provide top-tier cleaning solutions that leave your space sparkling and your mind at ease.</p>
+        <p class="lead">Landy Cleaning Services was born out of the desire to create a reliable, professional, and trustworthy cleaning service. We understand the importance of a clean environment and the peace of mind that comes with it. Our team of dedicated professionals is trained to handle all cleaning tasks with meticulous attention to detail, ensuring that every corner of your home or office shines.</p>
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./public/about-window.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        
+
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-dark flex-shrink-0 me-3">
+          <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M94 49.3306C53.9813 49.3306 21.5397 81.7722 21.5397 121.791C21.5397 161.81 53.9813 194.251 94 194.251C134.019 194.251 166.46 161.81 166.46 121.791C166.46 81.7722 134.019 49.3306 94 49.3306ZM11 121.791C11 75.9513 48.1604 38.7909 94 38.7909C139.84 38.7909 177 75.9513 177 121.791C177 167.631 139.84 204.791 94 204.791C48.1604 204.791 11 167.631 11 121.791Z" fill="#232B70"/>
+            <path d="M136.54 99.535C140.028 106.185 142 113.756 142 121.791C142 148.301 120.508 169.791 93.9987 169.791C67.4892 169.791 46 148.301 46 121.791C46 95.2807 67.4892 73.7909 93.9987 73.7909C107.253 73.7909 119.252 79.1614 127.94 87.8463" fill="#86CFB8"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M94.4987 78.3677C70.7929 78.3677 51.5765 97.5845 51.5765 121.291C51.5765 144.997 70.7929 164.214 94.4987 164.214C118.205 164.214 137.423 144.997 137.423 121.291C137.423 114.096 135.66 107.332 132.545 101.393C131.188 98.807 132.185 95.6104 134.771 94.2537C137.358 92.8969 140.554 93.8939 141.911 96.4803C145.803 103.9 148 112.346 148 121.291C148 150.839 124.045 174.791 94.4987 174.791C64.9517 174.791 41 150.839 41 121.291C41 91.7431 64.9517 67.7909 94.4987 67.7909C109.27 67.7909 122.651 73.7824 132.328 83.4566C134.394 85.5216 134.394 88.87 132.329 90.9355C130.264 93.0011 126.916 93.0016 124.851 90.9367C117.076 83.1645 106.354 78.3677 94.4987 78.3677Z" fill="#232B70"/>
+            <path d="M114 121.791C114 132.837 105.044 141.791 93.9987 141.791C82.9529 141.791 74 132.837 74 121.791C74 110.744 82.9529 101.791 93.9987 101.791C99.3996 101.791 104.299 103.932 107.899 107.41" fill="#86CFB8"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M93.9986 106.694C85.6601 106.694 78.902 113.452 78.902 121.791C78.902 130.13 85.6601 136.888 93.9986 136.888C102.338 136.888 109.098 130.129 109.098 121.791C109.098 118.78 111.538 116.34 114.549 116.34C117.559 116.34 120 118.78 120 121.791C120 136.152 108.357 147.791 93.9986 147.791C79.6391 147.791 68 136.151 68 121.791C68 107.431 79.6391 95.7909 93.9986 95.7909C101.018 95.7909 107.395 98.5797 112.068 103.095C114.233 105.186 114.292 108.638 112.201 110.803C110.109 112.968 106.658 113.028 104.493 110.936C101.769 108.304 98.0775 106.694 93.9986 106.694Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M193.946 21.7607C196.006 23.8207 196.006 27.1604 193.946 29.2202L97.7688 125.389C95.7089 127.449 92.3692 127.449 90.3094 125.389C88.2496 123.329 88.2498 119.989 90.3097 117.93L186.487 21.7604C188.547 19.7007 191.886 19.7008 193.946 21.7607Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M174.719 11.0972C177.579 10.5434 180.347 12.4129 180.9 15.2729L184.745 35.1318C185.299 37.9918 183.43 40.7591 180.57 41.3129C177.71 41.8667 174.942 39.9971 174.389 37.1371L170.543 17.2783C169.99 14.4183 171.859 11.6509 174.719 11.0972Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M163.8 22.0182C166.66 21.4648 169.427 23.3347 169.981 26.1947L173.823 46.0536C174.376 48.9136 172.507 51.6808 169.647 52.2342C166.786 52.7876 164.019 50.9177 163.466 48.0576L159.623 28.1987C159.07 25.3387 160.94 22.5716 163.8 22.0182Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M152.872 32.9422C155.732 32.3876 158.5 34.2563 159.054 37.1161L162.905 56.9697C163.459 59.8295 161.591 62.5974 158.731 63.152C155.871 63.7067 153.103 61.838 152.549 58.9782L148.698 39.1246C148.143 36.2648 150.012 33.4968 152.872 32.9422Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M174.388 35.1315C174.942 32.2716 177.71 30.4023 180.57 30.9562L200.434 34.8041C203.294 35.3581 205.163 38.1256 204.609 40.9855C204.055 43.8454 201.288 45.7148 198.428 45.1608L178.564 41.3129C175.704 40.759 173.834 37.9914 174.388 35.1315Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M163.466 46.0533C164.02 43.1933 166.787 41.3236 169.647 41.8771L189.514 45.7223C192.374 46.2759 194.244 49.0431 193.69 51.9031C193.136 54.7631 190.369 56.6329 187.509 56.0793L167.642 52.2341C164.782 51.6806 162.913 48.9133 163.466 46.0533Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M152.55 56.9694C153.105 54.1097 155.873 52.2412 158.732 52.796L178.591 56.6491C181.451 57.204 183.32 59.9721 182.765 62.8318C182.21 65.6916 179.442 67.5601 176.582 67.0052L156.723 63.1521C153.863 62.5973 151.995 59.8292 152.55 56.9694Z" fill="#232B70"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M153.566 56.1817C154.121 53.3219 156.889 51.4535 159.749 52.0083L179.608 55.8614C182.468 56.4163 184.336 59.1844 183.781 62.0441C183.226 64.9039 180.458 66.7724 177.599 66.2175L157.74 62.3644C154.88 61.8095 153.011 59.0414 153.566 56.1817Z" fill="#232B70"/>
+        </svg>
+        </div>
+        <div>
+          <h2>Our Vision</h2>
+          <p>To be the leading cleaning service provider known for our commitment to excellence, innovation, and sustainability, transforming every space into a clean and healthy environment.</p>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-dark flex-shrink-0 me-3">
+          <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M170.294 22.6759C176.471 22.6759 181.558 27.7132 181.558 33.8291C181.558 39.945 176.471 44.9822 170.294 44.9822C164.121 44.9822 159.033 39.945 159.033 33.8291C159.033 27.7132 164.121 22.6759 170.294 22.6759Z" fill="#86CFB8"/>
+            <path d="M104.539 58.6461C109.627 58.6461 113.622 62.6021 113.622 67.6393C113.622 72.6766 109.624 76.6299 104.539 76.6299C99.4545 76.6299 95.459 72.6766 95.459 67.6393C95.459 62.6021 99.4571 58.6461 104.539 58.6461Z" fill="#86CFB8"/>
+            <path d="M77.2925 33.8263V134.906H75.4781H65.6699H63.8555V33.8263C63.8555 30.229 66.7618 26.993 70.7573 26.993C72.5718 26.993 74.3888 27.7104 75.4781 29.1477C76.5699 30.229 77.2925 32.0277 77.2925 33.8263Z" fill="#86CFB8"/>
+            <path d="M86.3786 146.057V153.252H54.4092V146.057C54.4092 139.941 59.4965 135.265 65.3091 135.265H75.1199C81.6578 135.265 86.3786 139.941 86.3786 146.057Z" fill="#86CFB8"/>
+            <path d="M188.093 101.814C189.913 103.612 190.638 105.769 190.638 108.288C190.638 113.325 186.643 117.281 181.558 117.281H100.184C97.6392 117.281 95.4581 116.203 93.6436 114.763C91.8292 112.961 91.0986 110.807 91.0986 108.288C91.0986 103.254 95.0994 99.2949 100.184 99.2949H181.919C184.462 99.2949 186.643 100.015 188.093 101.814Z" fill="#86CFB8"/>
+            <path d="M127.429 153.251V171.238H122.708H110.358H18.4424H13.7217V153.251H54.7713H86.3794H106.721H127.429Z" fill="#86CFB8"/>
+            <path d="M86.3805 157.569C83.8382 157.569 81.6597 155.411 81.6597 152.893V145.698C81.6597 142.101 78.7508 139.223 75.1218 139.223C72.5769 139.223 70.3984 137.064 70.3984 134.545C70.3984 132.032 72.5769 129.872 75.1218 129.872C83.8408 129.872 90.74 136.707 90.74 145.337V152.534C91.1013 155.411 88.9229 157.569 86.3805 157.569Z" fill="#232B70"/>
+            <path d="M54.7716 157.569C52.2266 157.569 50.0508 155.412 50.0508 152.893V145.698C50.0508 137.064 56.9526 130.231 65.6715 130.231C68.2139 130.231 70.3949 132.388 70.3949 134.907C70.3949 137.425 68.2139 139.58 65.6715 139.58C62.04 139.58 59.1337 142.457 59.1337 146.054V153.249C59.1363 155.412 57.3139 157.569 54.7716 157.569Z" fill="#232B70"/>
+            <path d="M77.293 139.582H63.4893C60.9444 139.582 58.7686 137.428 58.7686 134.909V33.8265C58.7686 27.7132 63.8559 22.6733 70.0325 22.6733C72.9414 22.6733 75.8425 23.752 78.0209 25.9146C80.2046 28.0693 81.2911 30.9466 81.2911 33.8265V134.906C82.0138 137.428 79.838 139.582 77.293 139.582ZM68.2128 130.589H72.9388V33.8265C72.9388 33.1091 72.5722 32.3892 72.2083 32.3892C71.847 32.0252 71.1191 31.6692 70.7577 31.6692C69.6659 31.6692 68.5767 32.7478 68.5767 33.8265V130.586L68.2128 130.589Z" fill="#232B70"/>
+            <path d="M168.114 198.215H122.708C120.165 198.215 117.984 196.057 117.984 193.539C117.984 191.02 120.165 188.865 122.708 188.865H164.483L177.564 116.203C177.928 113.684 180.47 112.247 182.651 112.605C185.191 112.964 186.647 115.483 186.285 117.642L172.479 194.261C172.112 196.416 170.295 198.215 168.114 198.215Z" fill="#232B70"/>
+            <path d="M106.72 157.569C104.539 157.569 102.725 156.126 102.361 153.971L95.459 117.999C95.0977 115.48 96.5508 113.325 99.0958 112.603C101.636 112.244 103.817 113.681 104.539 116.2L111.444 152.17C111.808 154.689 110.357 156.846 107.812 157.569C107.448 157.569 107.082 157.569 106.72 157.569Z" fill="#232B70"/>
+            <path d="M127.428 175.555H122.707C120.165 175.555 117.984 173.398 117.984 170.879C117.984 168.363 120.165 166.206 122.707 166.206V157.574H18.4415V166.565C20.9839 166.565 23.1649 168.722 23.1649 171.24C23.1649 173.756 20.9839 175.914 18.4415 175.914H13.7208C11.1758 175.914 9 173.756 9 171.24V153.254C9 150.735 11.1758 148.581 13.7208 148.581H127.428C129.973 148.581 132.149 150.735 132.149 153.254V171.24C131.788 173.395 129.973 175.555 127.428 175.555Z" fill="#232B70"/>
+            <path d="M122.708 198.214H18.4424C15.9027 198.214 13.7217 196.057 13.7217 193.539V170.876C13.7217 168.36 15.9027 166.203 18.4424 166.203H123.072C125.615 166.203 127.796 168.36 127.796 170.876V193.539C127.429 196.057 125.253 198.214 122.708 198.214ZM22.8046 189.221H118.346V175.552H22.8046V189.221Z" fill="#232B70"/>
+            <path d="M181.92 121.599H100.185C96.5507 121.599 93.2778 120.159 90.3741 117.643C87.8318 115.124 86.376 111.527 86.376 107.929C86.376 100.374 92.5525 94.2603 100.182 94.2603H181.918C185.549 94.2603 188.822 95.6949 191.726 98.2136C194.268 100.732 195.724 104.329 195.724 107.929C195.363 115.48 189.189 121.599 181.92 121.599ZM100.185 103.609C97.6399 103.609 95.4588 105.767 95.4588 108.285C95.4588 109.364 95.8228 110.445 96.9146 111.524C97.6399 112.244 99.0957 112.961 100.185 112.961H181.92C184.463 112.961 186.644 110.807 186.644 108.288C186.644 107.209 186.282 106.131 185.188 105.052C184.101 103.971 183.007 103.609 181.92 103.609H100.185Z" fill="#232B70"/>
+            <path d="M186.641 174.474C181.554 174.474 176.83 172.675 173.196 169.437L170.654 166.918L133.6 133.828C131.785 132.029 131.421 129.149 133.233 127.35C135.053 125.552 137.959 125.196 139.774 126.992L179.37 162.603C181.915 164.761 185.183 165.842 188.82 165.119C194.263 164.405 198.261 159.723 198.261 154.327C198.261 152.89 197.9 151.45 197.172 150.013L191.365 136.702C190.27 134.542 191.365 131.665 193.907 130.945C196.085 129.866 198.992 130.945 199.717 133.464L205.527 146.774C206.619 149.29 207.344 151.809 207.344 154.686C207.344 164.402 200.076 173.031 190.268 174.471C188.822 174.474 187.73 174.474 186.641 174.474Z" fill="#232B70"/>
+            <path d="M104.54 81.3086C96.9129 81.3086 90.7363 75.1927 90.7363 67.6395C90.7363 60.0862 96.9155 53.9703 104.54 53.9703C112.17 53.9703 118.344 60.0836 118.344 67.6395C118.346 75.1927 112.17 81.3086 104.54 81.3086ZM104.54 63.3222C101.995 63.3222 99.8192 65.4822 99.8192 67.9981C99.8192 70.5168 101.995 72.6767 104.54 72.6767C107.082 72.6767 109.263 70.5168 109.263 67.9981C109.263 65.4822 107.082 63.3222 104.54 63.3222Z" fill="#232B70"/>
+            <path d="M29.7034 121.598C23.5268 121.598 18.4395 116.561 18.4395 110.448C18.4395 104.332 23.5268 99.2948 29.7034 99.2948C35.8773 99.2948 40.9647 104.332 40.9647 110.448C40.9647 116.559 35.8773 121.598 29.7034 121.598ZM29.7034 108.288C28.6142 108.288 27.525 109.367 27.525 110.448C27.525 111.524 28.6142 112.603 29.7034 112.603C30.7952 112.603 31.8844 111.524 31.8844 110.448C31.8871 109.367 30.7952 108.288 29.7034 108.288Z" fill="#232B70"/>
+            <path d="M170.293 49.6529C161.574 49.6529 154.309 42.4583 154.309 33.8265C154.309 25.1946 161.574 18 170.293 18C179.015 18 186.283 25.1946 186.283 33.8265C186.283 42.4583 179.374 49.6529 170.293 49.6529ZM170.293 27.3519C166.662 27.3519 163.391 30.2292 163.391 34.1878C163.391 38.1437 166.303 41.021 170.293 41.021C174.289 41.021 177.195 38.1437 177.195 34.1878C177.195 30.2292 174.289 27.3519 170.293 27.3519Z" fill="#232B70"/>
+        </svg>
+        </div>
+        <div>
+          <h2>Our Mission</h2>
+          <p>Our mission is to provide exceptional, personalized cleaning services with meticulous attention to detail, using eco-friendly products. We prioritize customer satisfaction, reliability, and continuous innovation to lead the industry.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./public/about-window.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="display-5 fw-bold lh-1 mb-3">Satisfaction Guaranteed!</h2>
+        <p class="lead">At Landy Cleaning Services, your satisfaction is our top priority. We guarantee that you will be delighted with the cleanliness of your home or office after our service. If for any reason you are not completely satisfied, simply let us know within 24 hours, and we will re-clean the specific areas free of charge. Your happiness is what drives us to continually deliver exceptional cleaning results and exceed your expectations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;" class="mb-5">
+        <h2 class="display-4 fw-bold lh-1 text-body-emphasis mb-3" style="flex-shrink: 1; flex-grow: 1; flex-basis: 600px;">Meet Our Dedicated Cleaning Team</h2>
+        <p class="col-lg-10 fs-4" style="flex-shrink: 1; flex-grow: 1; flex-basis: 600px;">Get to know the dedicated professionals who bring expertise and care to every cleaning task at Landy Cleaning Services.</p>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+        <div class="col">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Adam Standler</h5>
+              <p class="card-text">Head in General Cleaning</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Stefanie Citra</h5>
+              <p class="card-text">Head in Kitchen & Laundry Room</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Richard Doyle</h5>
+              <p class="card-text">Head in Office & Building Cleaning</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+  </div>
+
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+
+      <div class="col mb-3">
+        <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" href="#">
+          <img src="./public/logo.svg" alt="Landy" width="242" height="55">
+        </a>
+        <p class="text-body-secondary">© 2024</p>
+      </div>
+
+      <div class="col mb-3"></div>
+
+      <div class="col mb-3"></div>
+  
+      <div class="col mb-3">
+        <h5>Landy Cleaning</h5>
+        <p>Landy Cleaning delivers meticulous residential cleaning services, ensuring homes sparkle with reliability and quality.</p>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>Our Contact</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+61 448 710 196</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+61 468 687 280</a></li>
+        </ul>
+      </div>
+
+    </footer>
+  </div>
+
+  <script>
+    function navigateToService(id) {
+        window.location.href = `service.html?id=${id}`;
+    }
+  </script>
+
+</body>
+</html>
