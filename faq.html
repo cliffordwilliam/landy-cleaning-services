@@ -38,21 +38,21 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" onclick="navigateToService(1)">Bathroom</a></li>
               <li><a class="dropdown-item" href="#" onclick="navigateToService(2)">Livingroom</a></li>
-              <li><a class="dropdown-item" href="#">Bedroom</a></li>
-              <li><a class="dropdown-item" href="#">Laundry Room</a></li>
-              <li><a class="dropdown-item" href="#">Kitchen</a></li>
-              <li><a class="dropdown-item" href="#">Door</a></li>
-              <li><a class="dropdown-item" href="#">All Room</a></li>
-              <li><a class="dropdown-item" href="#">Additional</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(3)">Kitchen</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(4)">Bedroom</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(5)">Laundry Room</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(6)">Door</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(7)">All Room</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateToService(8)">Additional</a></li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="./about.html">About Us</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="./faq.html">FAQ</a>
           </li>
 
         </ul>
@@ -60,7 +60,7 @@
     </div>
   </nav>
 
-  <div class="px-4 py-5 my-0" style="height: 702px; background: url(./public/about_hero.webp); background-size: cover; display: flex; align-items: center;">
+  <div class="px-4 py-5 my-0" style="height: 702px; background: url(./public/faq_hero.webp); background-size: cover; display: flex; align-items: center;">
     <div style="display: flex; width: 100%;">
         <div style="flex-basis: 252px; flex-grow: 0; flex-shrink: 1;"></div>
         <div style="flex-grow: 1; flex-shrink: 0; width: 100%; max-width: 500px;">
@@ -76,36 +76,36 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
+                  What cleaning services do you offer?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  At Landy Cleaning Services, we offer a wide range of cleaning services including residential cleaning, commercial cleaning, specialized cleaning such as move-in/move-out and post-construction cleaning, and customizable cleaning options tailored to your specific needs.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
+                  How do I book a cleaning service?
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Booking a cleaning service with us is easy! You can book online through our website or by giving us a call. Our friendly customer service team will assist you in scheduling a convenient time for your cleaning appointment.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
+                  Do I need to provide cleaning supplies and equipment?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  No, our team comes fully equipped with all the necessary cleaning supplies and equipment. You don't have to worry about providing anything – just sit back and relax while we take care of the cleaning.
                 </div>
               </div>
             </div>
@@ -113,11 +113,20 @@
       </div>
   </div>
 
+  <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <img src="./public/faq_question.webp" alt="..." width="410" class="img-fluid">
+    <span style="font-size: 28px; text-align: center;">
+      <span style="color:#1A8F6A">Got any question?</span><br>
+      Feel free to say hello. We <br>
+      are happy to hear you
+    </span>
+  </div>
+
   <div class="container">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
 
       <div class="col mb-3">
-        <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" href="#">
+        <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" href="./index.html">
           <img src="./public/logo.svg" alt="Landy" width="242" height="55">
         </a>
         <p class="text-body-secondary">© 2024</p>
@@ -135,8 +144,8 @@
       <div class="col mb-3">
         <h5>Our Contact</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+61 448 710 196</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+61 468 687 280</a></li>
+          <li class="nav-item mb-2"><a href="https://wa.me/61448710196?text=I%20am%20interested%20in%20your%20cleaning%20service" class="nav-link p-0 text-body-secondary">+61 448 710 196</a></li>
+          <li class="nav-item mb-2"><a href="https://wa.me/61468687280?text=I%20am%20interested%20in%20your%20cleaning%20service" class="nav-link p-0 text-body-secondary">+61 468 687 280</a></li>
         </ul>
       </div>
 
